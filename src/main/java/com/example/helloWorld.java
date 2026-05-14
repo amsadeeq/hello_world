@@ -1,7 +1,13 @@
 package com.example;
 
-public class helloWorld {
+public class HelloWorld {
+    // Instance method for testability
+    public String getMessage() {
+        return "Hello, World!";
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        HelloWorld hw = new HelloWorld();
+        System.out.println(hw.getMessage());
     }
 }
