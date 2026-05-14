@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 public class HelloWorldTest {
     @Test
     public void testGetMessage() {
-        helloWorld hw = new helloWorld();
+        HelloWorld hw = new HelloWorld();
         assertEquals("Hello, World!", hw.getMessage()); // Fixed expected string
     }
 }
