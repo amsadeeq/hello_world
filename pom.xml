@@ -19,44 +19,8 @@
     </dependency>
   </dependencies>
 
-<!-- Jacoco XML-->
-
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.jacoco</groupId>
-      <artifactId>jacoco-maven-plugin</artifactId>
-      <version>0.8.10</version>
-      <executions>
-        <execution>
-          <goals>
-            <goal>prepare-agent</goal>
-          </goals>
-        </execution>
-        <execution>
-          <id>report</id>
-          <phase>test</phase>
-          <goals>
-            <goal>report</goal>
-          </goals>
-        </execution>
-      </executions>
-      <configuration>
-        <outputDirectory>${project.build.directory}/jacoco-report</outputDirectory>
-        <reports>
-          <report>xml</report>
-          <report>html</report>
-        </reports>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
-
-
   <build>
     <plugins>
-
-    
       <!-- Jacoco plugin -->
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -76,6 +40,13 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <outputDirectory>${project.build.directory}/jacoco-report</outputDirectory>
+          <reports>
+            <report>xml</report>
+            <report>html</report>
+          </reports>
+        </configuration>
       </plugin>
     </plugins>
   </build>
